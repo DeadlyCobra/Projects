@@ -133,8 +133,8 @@ namespace EmployeesForms
         {
             dataGridView1.DataSource=Employesslist;
         }
-        private static EmployeesForm? instance;
-        internal static EmployeesForm GetInstance(Form parentContainer)
+        private static EmployeesForm instance;
+        internal static EmployeesForm GetInstance(Form parentContaine)
         {
             if (instance == null || instance.IsDisposed)
             { 
