@@ -33,13 +33,13 @@ namespace EmployeesForms
 
         private void AssociateAndRaiseVIewEvents()
         {
-            SqlConnection cd = new SqlConnection("Data Source=\"localhost, 1433\";Initial Catalog=Transporting;User ID=sa;Password=Mo" +
-"nster1@3");
+            SqlConnection cd = new SqlConnection("Data Source=\"localhost, 1433\";Initial Catalog=Transporting;User ID=sa;Password=Monster1@3");
             cd.Open();
             SqlCommand cmd = new SqlCommand("Select (PositName) from Position", cd);
             SqlDataReader reader;
             reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
+
             dt.Columns.Add("PositName", typeof(string));
             dt.Load(reader);
             comboPosition.ValueMember = "PositName";
@@ -89,7 +89,7 @@ namespace EmployeesForms
             //Dellete
             ButtonDelete.Click += delegate 
             { 
-                DeleteEvent?.Invoke(this, EventArgs.Empty); 
+               
              var result =   MessageBox.Show("Are you wont to delete the selected Employes?","Warning",
                     MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 if(result == DialogResult.Yes)
@@ -132,6 +132,8 @@ namespace EmployeesForms
         public void SetEmpListBindingSource(BindingSource Employesslist)
         {
             dataGridView1.DataSource=Employesslist;
+            
+
         }
         private static EmployeesForm instance;
         internal static EmployeesForm GetInstance(Form parentContaine)
@@ -139,10 +141,11 @@ namespace EmployeesForms
             if (instance == null || instance.IsDisposed)
             { 
             instance = new EmployeesForm();
-            instance.MdiParent = parentContainer;
+            instance.MdiParent = parentContaine;
             instance.FormBorderStyle=FormBorderStyle.None;
             instance.Dock = DockStyle.Fill;
             }
+
             else
             {
                 if (instance.WindowState == FormWindowState.Minimized)
@@ -170,6 +173,21 @@ namespace EmployeesForms
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

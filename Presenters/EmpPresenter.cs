@@ -77,7 +77,7 @@ namespace Projects.Presenters
         private void SaveEmp(object? sender, EventArgs e)
         {
             var model = new Employees();
-           
+            model.Id = Convert.ToInt32(view.EmpId);
             model.Firname1 = view.EmpFirstName ;
             model.LasNane1 = view.EmpLastName  ;
             model.Streat1 = view.EmpStreatAdres ;
