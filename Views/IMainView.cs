@@ -9,6 +9,7 @@ namespace Projects.Views
     public interface IMainView
     {
         event EventHandler ShowEmpForms;
+        event EventHandler ShowMachForms;
         event EventHandler ShowOwnerView;
         event EventHandler ShowVestsView;
           

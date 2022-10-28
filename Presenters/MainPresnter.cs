@@ -9,6 +9,7 @@ using Projects.Models;
 using Projects.Views;
 using System.Windows.Forms;
 
+
 namespace Projects.Presenters
 {
     public class MainPresnter
@@ -22,8 +23,11 @@ namespace Projects.Presenters
         {
             this.mainView = mainView;
             this.sqlConnectingString = sqlConnectingString;
+       
             this.mainView.ShowEmpForms += ShowEmpsView;
+            this.mainView.ShowMachForms += ShowMachView;
         }
+        
 
         private void ShowEmpsView(object? sender, EventArgs e)
         {
@@ -31,7 +35,12 @@ namespace Projects.Presenters
             EmployeesView view = EmployeesForm.GetInstance((MainView)mainView);
             IEmpRepository repository = new EmpRepository(sqlConnectingString);
             new EmpPresenter(view, repository);
-
+        }
+        private void ShowMachView(object? sender, EventArgs e)
+        {
+            MachineryView view = MachineryForm.GetInstanceMach((MainView)mainView);
+            IMachRepository repository = new MachRepository(sqlConnectingString);
+            new MachPresent(view, repository);
         }
     }
 }
