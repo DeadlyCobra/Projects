@@ -59,7 +59,25 @@ namespace Projects._Repositories
 
         public void Edit(Employees employees)
         {
-            throw new NotImplementedException();
+            using (var connecction = new SqlConnection(ConnectingString))
+            using (var command = new SqlCommand("UpdateEMP"))
+            {
+                connecction.Open();
+                command.Connection = connecction;
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@ID", employees.Id);
+                command.Parameters.AddWithValue("@FirstName", employees.Firname1);
+                command.Parameters.AddWithValue("@LastName", employees.LasNane1);
+                command.Parameters.AddWithValue("@StreatAdres", employees.Streat1);
+                command.Parameters.AddWithValue("@City", employees.City1);
+                command.Parameters.AddWithValue("@Province", employees.Province1);
+                command.Parameters.AddWithValue("@Postal", employees.Postal1);
+                command.Parameters.AddWithValue("@Email", employees.Emial1);
+                command.Parameters.AddWithValue("@PhonneNum", employees.PhoneNumer1);
+                command.Parameters.AddWithValue("@Position", employees.Position1);
+                command.ExecuteNonQuery();
+            }
         }
          
      

@@ -21,8 +21,7 @@ namespace Projects
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string sqlConnectingString = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
-            IMainView view = new MainView();
-            
+            IMainView view = new MainView();         
             new MainPresnter(view, sqlConnectingString);
             Application.Run((Form)view);
         }
