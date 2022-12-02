@@ -103,8 +103,6 @@ namespace EmployeesForms
 
         }
 
-      
-
         //Prepertis
         public string EmpId { get => textID.Text; set => textID.Text=value; }
         public string EmpFirstName { get => textFirstName.Text; set => textFirstName.Text=value; }
@@ -132,16 +130,14 @@ namespace EmployeesForms
         public void SetEmpListBindingSource(BindingSource Employesslist)
         {
             dataGridView1.DataSource=Employesslist;
-            
-
         }
-        private static EmployeesForm instance;
-        internal static EmployeesForm GetInstance(Form parentContaine)
+        private static EmployeesForm? instance;
+        internal static EmployeesForm GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             { 
             instance = new EmployeesForm();
-            instance.MdiParent = parentContaine;
+            instance.MdiParent = parentContainer;
             instance.FormBorderStyle=FormBorderStyle.None;
             instance.Dock = DockStyle.Fill;
             }
@@ -165,7 +161,6 @@ namespace EmployeesForms
 
         }
 
-
         private void comboPosition_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -188,6 +183,11 @@ namespace EmployeesForms
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ButtoSearch_Click(object sender, EventArgs e)
         {
 
         }

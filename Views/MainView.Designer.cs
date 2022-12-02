@@ -32,13 +32,13 @@ namespace Projects.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.EmpButton = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.IconDashbord = new FontAwesome.Sharp.IconButton();
             this.IcoMachinery = new FontAwesome.Sharp.IconButton();
             this.IconOrders = new FontAwesome.Sharp.IconButton();
-            this.iconCostomers = new FontAwesome.Sharp.IconButton();
-            this.EmpButton = new FontAwesome.Sharp.IconButton();
+            this.iconCustomers = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.BtnMinialize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
@@ -59,17 +59,35 @@ namespace Projects.Views
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.EmpButton);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.IconDashbord);
             this.panelMenu.Controls.Add(this.IcoMachinery);
             this.panelMenu.Controls.Add(this.IconOrders);
-            this.panelMenu.Controls.Add(this.iconCostomers);
-            this.panelMenu.Controls.Add(this.EmpButton);
+            this.panelMenu.Controls.Add(this.iconCustomers);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(232, 613);
             this.panelMenu.TabIndex = 0;
+            // 
+            // EmpButton
+            // 
+            this.EmpButton.FlatAppearance.BorderSize = 0;
+            this.EmpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpButton.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EmpButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.EmpButton.IconChar = FontAwesome.Sharp.IconChar.PersonDigging;
+            this.EmpButton.IconColor = System.Drawing.Color.Gainsboro;
+            this.EmpButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.EmpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpButton.Location = new System.Drawing.Point(6, 284);
+            this.EmpButton.Name = "EmpButton";
+            this.EmpButton.Size = new System.Drawing.Size(226, 60);
+            this.EmpButton.TabIndex = 5;
+            this.EmpButton.Text = "Employees";
+            this.EmpButton.UseVisualStyleBackColor = true;
+            this.EmpButton.Click += new System.EventHandler(this.EmpButton_Click);
             // 
             // panelLogo
             // 
@@ -149,43 +167,24 @@ namespace Projects.Views
             this.IconOrders.Text = "Orders";
             this.IconOrders.Click += new System.EventHandler(this.IconOrders_Click);
             // 
-            // iconCostomers
+            // iconCustomers
             // 
-            this.iconCostomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.iconCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconCostomers.FlatAppearance.BorderSize = 0;
-            this.iconCostomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconCostomers.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.iconCostomers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconCostomers.IconChar = FontAwesome.Sharp.IconChar.PeopleArrows;
-            this.iconCostomers.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconCostomers.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCostomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconCostomers.Location = new System.Drawing.Point(6, 350);
-            this.iconCostomers.Name = "iconCostomers";
-            this.iconCostomers.Size = new System.Drawing.Size(226, 60);
-            this.iconCostomers.TabIndex = 10;
-            this.iconCostomers.Text = "Costomers";
-            this.iconCostomers.Click += new System.EventHandler(this.iconCostomers_Click);
-            // 
-            // EmpButton
-            // 
-            this.EmpButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmpButton.FlatAppearance.BorderSize = 0;
-            this.EmpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EmpButton.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.EmpButton.ForeColor = System.Drawing.Color.Gainsboro;
-            this.EmpButton.IconChar = FontAwesome.Sharp.IconChar.PersonDigging;
-            this.EmpButton.IconColor = System.Drawing.Color.Gainsboro;
-            this.EmpButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EmpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EmpButton.Location = new System.Drawing.Point(6, 284);
-            this.EmpButton.Name = "EmpButton";
-            this.EmpButton.Size = new System.Drawing.Size(226, 60);
-            this.EmpButton.TabIndex = 11;
-            this.EmpButton.Text = "Employes";
-            this.EmpButton.Click += new System.EventHandler(this.EmpButton_Click);
+            this.iconCustomers.FlatAppearance.BorderSize = 0;
+            this.iconCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCustomers.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.iconCustomers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconCustomers.IconChar = FontAwesome.Sharp.IconChar.PeopleArrows;
+            this.iconCustomers.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconCustomers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconCustomers.Location = new System.Drawing.Point(6, 350);
+            this.iconCustomers.Name = "iconCustomers";
+            this.iconCustomers.Size = new System.Drawing.Size(226, 60);
+            this.iconCustomers.TabIndex = 10;
+            this.iconCustomers.Text = "Customers";
+            this.iconCustomers.Click += new System.EventHandler(this.iconCustomers_Click);
             // 
             // panelTitleBar
             // 
@@ -339,9 +338,8 @@ namespace Projects.Views
         #endregion
 
         private Panel panelMenu;
-        private FontAwesome.Sharp.IconButton EmpButton;
         private FontAwesome.Sharp.IconButton IconOrders;
-        private FontAwesome.Sharp.IconButton iconCostomers;
+        private FontAwesome.Sharp.IconButton iconCustomers;
         private FontAwesome.Sharp.IconButton IcoMachinery;
         private FontAwesome.Sharp.IconButton IconDashbord;
         private Panel panelLogo;
@@ -355,5 +353,6 @@ namespace Projects.Views
         private FontAwesome.Sharp.IconButton BtnMinialize;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton ExitButton;
+        private FontAwesome.Sharp.IconButton EmpButton;
     }
 }

@@ -10,8 +10,7 @@ namespace Projects.Views
     {
         event EventHandler ShowEmpForms;
         event EventHandler ShowMachForms;
-        event EventHandler ShowOwnerView;
-        event EventHandler ShowVestsView;
+        event EventHandler ShowCustForms;
           
     }
 }

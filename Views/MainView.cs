@@ -21,12 +21,18 @@ namespace Projects.Views
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public event EventHandler ShowEmpForms;
+        public event EventHandler ShowMachForms;
+        public event EventHandler ShowCustForms;
+
         public MainView()
         {
             InitializeComponent();
            
-            EmpButton.Click += delegate { ShowEmpForms?.Invoke(this, EventArgs.Empty); };
-            IcoMachinery.Click+=delegate { ShowMachForms?.Invoke(this, EventArgs.Empty); };
+           EmpButton.Click += delegate { ShowEmpForms?.Invoke(this, EventArgs.Empty); };
+           IcoMachinery.Click+= delegate { ShowMachForms?.Invoke(this, EventArgs.Empty); };
+           iconCustomers.Click += delegate { ShowCustForms?.Invoke(this, EventArgs.Empty); };
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -99,10 +105,8 @@ namespace Projects.Views
             childFrom.Show();
             labelTitleChildForm.Text = childFrom.Text;
         }
-        public event EventHandler ShowEmpForms;
-        public event EventHandler ShowOwnerView;
-        public event EventHandler ShowVestsView;
-        public event EventHandler ShowMachForms;
+        
+
 
         private void IconDashbord_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,12 @@ namespace Projects.Views
             ActivateButton(sender, RGBColor.color2);
         }
 
+        private void EmpButton_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColor.color4);
+            OpenChildForm(new EmployeesForm());
+            panelDesktop.Visible = false;
+        }
         private void IconOrders_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
@@ -121,17 +131,11 @@ namespace Projects.Views
             
         }
 
-        private void EmpButton_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color4);
-            OpenChildForm( new EmployeesForm());
-            panelDesktop.Visible=false;
-
-        }
-
-        private void iconCostomers_Click(object sender, EventArgs e)
+        private void iconCustomers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color5);
+            OpenChildForm(new CustomersForms());
+            panelDesktop.Visible = false;
         }
 
         private void IcoMachinery_Click(object sender, EventArgs e)
@@ -196,5 +200,7 @@ namespace Projects.Views
         {
             WindowState = FormWindowState.Minimized;
         }
+
+
     }
 }

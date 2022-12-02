@@ -18,14 +18,4 @@ namespace Projects.Models
 
 
     }
-    public interface IMachRepositoryFor
-    {
-        //forktlifts
-        void AddFor(Machinery machinery);
-        void EditFor(Machinery machinery);
-        void DeleteFor(int id);
-
-        IEnumerable<Machinery> GetAllFor(int id);
-        IEnumerable<Machinery> GetByValueFor(string value);//Searchs
-    }
 }

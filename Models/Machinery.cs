@@ -44,31 +44,6 @@ namespace Projects.Models
         
 
     
-        }
-    public class Machineryfor
-    {
-        //Forklifts
-        private int ForId;
-        private string ForName;
-        private string ForModel;
-        private string ForServ;
-        //Forklifts
-        [DisplayName("Id")]
-        public int ForId1 { get => ForId; set => ForId = value; }
-
-        [DisplayName("Name")]
-        [Required(ErrorMessage = "Forklifts name is requerid")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Forklifts name must be between 2 and 100 characters")]
-        public string ForName1 { get => ForName; set => ForName = value; }
-        [DisplayName("Model")]
-        [Required(ErrorMessage = "Forklifts Model is requerid")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Forklifts Model  must be between 2 and 100 characters")]
-        public string ForModel1 { get => ForModel; set => ForModel = value; }
-
-        [DisplayName("Service Date")]
-        [Required(ErrorMessage = "Service Date")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Service Date must be between 2 and 100 characters")]
-        public string ForServ1 { get => ForServ; set => ForServ = value; }
-
     }
+    
 }

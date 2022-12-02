@@ -3,6 +3,7 @@ using Projects.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace Projects.Presenters
     internal class MachPresent
     {
         //Fields
+        //Truck
         private MachineryView view;
         private IMachRepository repository;
         private BindingSource machBindingSource;
@@ -21,17 +23,18 @@ namespace Projects.Presenters
             this.machBindingSource = new BindingSource();
             this.view = view;
             this.repository = repository;
-            
+
             //Subscribe event handler methods to view events
             this.view.SearchEvent += SearchMach;
             this.view.AddNewEvent += AddNewMach;
             this.view.EditEvent += LoadSelectedMachToEdit;
-            this.view.DeleteEvent += DeleteSelectedEmp;
+            this.view.DeleteEvent += DeleteSelectedTruck;
             this.view.SaveEvent += SaveMach;
             this.view.CancelEvent += CancaelAction;
 
             //Set emploice bindnig source
             this.view.SetMachListBindingSource(machBindingSource);
+
             //Load Employe list view
             LoadAllMachList();
             //Show view
@@ -44,10 +47,10 @@ namespace Projects.Presenters
         }
         private void SearchMach(object? sender, EventArgs e)
         {
-            bool emptyValue = string.IsNullOrWhiteSpace(this.view.SerchValue);
-            if (emptyValue == false)
+            bool machValue = string.IsNullOrWhiteSpace(this.view.SerchValue);
+            if (machValue == false)
             {
-               machineryList = repository.GetByValue(this.view.SerchValue);
+                machineryList = repository.GetByValue(this.view.SerchValue);
             }
             else machineryList = repository.GetAll();
             machBindingSource.DataSource = machineryList;
@@ -69,10 +72,10 @@ namespace Projects.Presenters
         {
             var model = new Machinery();
             model.TrId1 = Convert.ToInt32(view.TrId);
-            model.TrName1= view.TrName;
+            model.TrName1 = view.TrName;
             model.TrRegistration1 = view.TrRegistration;
             model.TrServ1 = view.TrServ;
-           
+
             try
             {
                 new Common.ModelDataVaildation().Vaildate(model);
@@ -107,7 +110,7 @@ namespace Projects.Presenters
         {
             CleanViewFields();
         }
-        private void DeleteSelectedEmp(object? sender, EventArgs e)
+        private void DeleteSelectedTruck(object? sender, EventArgs e)
         {
             try
             {
@@ -123,6 +126,8 @@ namespace Projects.Presenters
                 view.Message = "An Error ocurred, could not delete Truck";
             }
         }
+        
+    }
+
 
     }
-}

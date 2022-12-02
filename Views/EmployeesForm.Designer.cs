@@ -162,6 +162,7 @@ namespace EmployeesForms
             this.ButtoSearch.TabIndex = 4;
             this.ButtoSearch.Text = "Serach";
             this.ButtoSearch.UseVisualStyleBackColor = false;
+            this.ButtoSearch.Click += new System.EventHandler(this.ButtoSearch_Click);
             // 
             // ButtonDelete
             // 
@@ -342,7 +343,7 @@ namespace EmployeesForms
             this.textPostal.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textPostal.Location = new System.Drawing.Point(575, 206);
             this.textPostal.Name = "textPostal";
-            this.textPostal.Size = new System.Drawing.Size(129, 27);
+            this.textPostal.Size = new System.Drawing.Size(192, 27);
             this.textPostal.TabIndex = 10;
             // 
             // textProvince
@@ -351,7 +352,7 @@ namespace EmployeesForms
             this.textProvince.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textProvince.Location = new System.Drawing.Point(575, 154);
             this.textProvince.Name = "textProvince";
-            this.textProvince.Size = new System.Drawing.Size(198, 27);
+            this.textProvince.Size = new System.Drawing.Size(192, 27);
             this.textProvince.TabIndex = 9;
             // 
             // textCity
@@ -360,7 +361,7 @@ namespace EmployeesForms
             this.textCity.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textCity.Location = new System.Drawing.Point(575, 100);
             this.textCity.Name = "textCity";
-            this.textCity.Size = new System.Drawing.Size(198, 27);
+            this.textCity.Size = new System.Drawing.Size(192, 27);
             this.textCity.TabIndex = 8;
             // 
             // textAddres
@@ -499,10 +500,10 @@ namespace EmployeesForms
             // textFirstName
             // 
             this.textFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textFirstName.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textFirstName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textFirstName.Location = new System.Drawing.Point(125, 50);
             this.textFirstName.Name = "textFirstName";
-            this.textFirstName.Size = new System.Drawing.Size(230, 27);
+            this.textFirstName.Size = new System.Drawing.Size(230, 30);
             this.textFirstName.TabIndex = 1;
             // 
             // label4
@@ -527,15 +528,13 @@ namespace EmployeesForms
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 70);
+            this.panel1.Size = new System.Drawing.Size(1227, 68);
             this.panel1.TabIndex = 0;
             // 
             // ExitButton

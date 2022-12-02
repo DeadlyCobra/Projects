@@ -26,9 +26,9 @@ namespace Projects.Views
             InitializeComponent();
             AssociateAndRaiseVIewEvents();
             tabControl1.TabPages.Remove(tabPage2);
-            tabControl1.TabPages.Remove(tabPage4);
             MachExitButton.Click += delegate { this.Close(); };
         }
+        //Trucks
         private void AssociateAndRaiseVIewEvents()
         {
             SqlConnection cd = new SqlConnection("Data Source=\"localhost, 1433\";Initial Catalog=Transporting;User ID=sa;Password=Monster1@3");
@@ -44,9 +44,8 @@ namespace Projects.Views
             comboBoxTruck.DataSource = dt;
             cd.Close();
 
-           
-            buttonSerchTruck.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-
+           //Serch
+            buttonSerchTruck.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };  
             textSearchTruck.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -57,7 +56,6 @@ namespace Projects.Views
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1?.TabPages.Remove(tabPage1);
-                tabControl1?.TabPages.Remove(tabPage3);
                 tabControl1?.TabPages.Add(tabPage2);
                 tabPage2.Text = "Add New Truck";
             };
@@ -66,7 +64,6 @@ namespace Projects.Views
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1?.TabPages.Remove(tabPage1);
-                tabControl1?.TabPages.Remove(tabPage3);
                 tabControl1?.TabPages.Add(tabPage2);
                 tabPage2.Text = "Edit Truck";
             };
@@ -88,7 +85,7 @@ namespace Projects.Views
                 CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1?.TabPages.Remove(tabPage2);
                 tabControl1?.TabPages.Add(tabPage1);
-                tabControl1?.TabPages.Add(tabPage3);
+  
             };
             //Dellete
             buttonDeleteTruck.Click += delegate
@@ -107,6 +104,8 @@ namespace Projects.Views
         {
             dataGridViewTruck.DataSource = Machinerylist;
         }
+
+        //Machinery
         private static MachineryForm? instance;
         internal static MachineryForm GetInstanceMach(Form parentContaine)
         {
@@ -126,6 +125,7 @@ namespace Projects.Views
             }
             return instance;
         }
+       
         //events
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
@@ -139,16 +139,12 @@ namespace Projects.Views
         public string TrName { get => comboBoxTruck.Text; set => comboBoxTruck.Text = value; }
         public string TrRegistration { get => TruckRegistration.Text; set => TruckRegistration.Text = value; }
         public string TrServ { get => TruckServDate.Text; set => TruckServDate.Text = value; }
-        /*
-        public string ForId { get => ForkliftsID.Text; set => ForkliftsID.Text = value; }
-        public string ForName { get => ForkliftsName.Text; set => ForkliftsName.Text = value; }
-        public string ForModel { get => ForkliftsModel.Text; set => ForkliftsModel.Text = value; }
-        public string ForServ { get => ForkliftsServDate.Text; set => ForkliftsServDate.Text = value; }
-        */
+               
         public string SerchValue { get => textSearchTruck.Text; set => textSearchTruck.Text = value; }
         public bool IsEdit { get => isEdit; set => isEdit = value; }
         public bool IsSuccessful { get => isSuccessful; set => isSuccessful = value; }
         public string Message { get => message; set => message = value; }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 

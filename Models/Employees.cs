@@ -12,15 +12,15 @@ namespace Projects.Models
     {
         //Fields
         private int id;
-        private string Firname;
-        private string LasNane;
-        private string Streat;
-        private string City;
-        private string Province;
-        private string Postal;
-        private string Emial;
-        private string PhoneNumer;
-        private string Position;
+        private string? Firname;
+        private string? LasNane;
+        private string? Streat;
+        private string? City;
+        private string? Province;
+        private string? Postal;
+        private string? Emial;
+        private string? PhoneNumer;
+        private string? Position;
 
         //Propertis- Validations
         [DisplayName("ID")]

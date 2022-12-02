@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace Projects.Views
 {
-    internal interface MachineryView
+    internal interface CustomersView
     {
         //Propertis -Fileds
-        string TrId { get; set; }
-        string TrName { get; set; }
-        string TrRegistration { get; set; }
-        string TrServ { get; set; }
+        string CostId { get; set; }
+        string CostCompName { get; set; }
+        string CostNip { get; set; }
+        string CostContry { get; set; }
+        string CostStreetAdres { get; set; }
+        string CostCity { get; set; }
+        string CostProvince { get; set; }
+        string CostPostal { get; set; }
+        string CostEmail { get; set; }
+        string CostPhonneNum { get; set; }
 
         string SerchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }
 
-
         //Events
-
         event EventHandler SearchEvent;
         event EventHandler AddNewEvent;
         event EventHandler EditEvent;
@@ -29,10 +33,9 @@ namespace Projects.Views
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
-        //Methods
-        void SetMachListBindingSource(BindingSource MachineryListe);
-        void Show();//optional
+        //Metods
+        void SetCostListBindingSource(BindingSource Customerslist);
+        void Show();
 
     }
-    
 }
