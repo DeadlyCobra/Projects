@@ -26,7 +26,6 @@ namespace Projects._Repositories
                 connecction.Open();
                 command.Connection = connecction;
                 command.CommandType = CommandType.StoredProcedure;
-
                 command.Parameters.AddWithValue("@TruckName", machinery.TrName1);
                 command.Parameters.AddWithValue("@TruckRegistration", machinery.TrRegistration1);
                 command.Parameters.AddWithValue("@TruckServ", machinery.TrServ1);
@@ -77,14 +76,16 @@ namespace Projects._Repositories
                 {
                     while (reader.Read())
                     {
-                        var machModel = new Machinery();
-                        machModel.TrId1 = (int)reader[0];
-                        machModel.TrName1 = reader[1].ToString();
-                        machModel.TrRegistration1 = reader[2].ToString();
-                        machModel.TrServ1 = reader[3].ToString();
-
+                        var machModel = new Machinery()
+                        { 
+                        TrId1 = (int)reader[0],
+                        TrName1 = reader[1].ToString(),
+                        TrRegistration1 = reader[2].ToString(),
+                        TrServ1 = reader[3].ToString(),
+                    };
                         MachList.Add(machModel);
                     }
+                   
                 }
             }
             return MachList;
@@ -96,7 +97,7 @@ namespace Projects._Repositories
             string MachName = value;
             //Search by Id
             using (var connecction = new SqlConnection(ConnectingString))
-            using (var command = new SqlCommand("SelectTruckID"))
+            using (var command = new SqlCommand(@"SelectTruckID"))
             {
                 connecction.Open();
                 command.Connection = connecction;

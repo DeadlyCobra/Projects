@@ -25,6 +25,7 @@ namespace Projects.Views
         public event EventHandler ShowEmpForms;
         public event EventHandler ShowMachForms;
         public event EventHandler ShowCustForms;
+        public event EventHandler ShowOrdForms;
 
         public MainView()
         {
@@ -33,6 +34,8 @@ namespace Projects.Views
            EmpButton.Click += delegate { ShowEmpForms?.Invoke(this, EventArgs.Empty); };
            IcoMachinery.Click+= delegate { ShowMachForms?.Invoke(this, EventArgs.Empty); };
            iconCustomers.Click += delegate { ShowCustForms?.Invoke(this, EventArgs.Empty); };
+           IconOrders.Click += delegate { ShowOrdForms?.Invoke(this, EventArgs.Empty); };
+            
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -113,22 +116,18 @@ namespace Projects.Views
             ActivateButton(sender, RGBColor.color1);
         }
 
-        private void iconProducts_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColor.color2);
-        }
-
         private void EmpButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color4);
             OpenChildForm(new EmployeesForm());
             panelDesktop.Visible = false;
         }
+
         private void IconOrders_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
             OpenChildForm(new FormOrders());
-            
+            panelDesktop.Visible = false;
         }
 
         private void iconCustomers_Click(object sender, EventArgs e)
@@ -201,6 +200,9 @@ namespace Projects.Views
             WindowState = FormWindowState.Minimized;
         }
 
+        private void panelDesktop_Paint_1(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

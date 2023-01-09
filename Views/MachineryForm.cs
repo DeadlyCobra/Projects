@@ -75,7 +75,6 @@ namespace Projects.Views
                 {
                     tabControl1?.TabPages.Remove(tabPage2);               
                     tabControl1?.TabPages.Add(tabPage1);
-                    tabControl1?.TabPages.Add(tabPage2);
                 }
                 MessageBox.Show(Message);
             };

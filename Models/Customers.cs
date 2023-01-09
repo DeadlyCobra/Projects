@@ -51,9 +51,9 @@ namespace Projects.Models
         [StringLength(100, MinimumLength = 2, ErrorMessage = "City  must be between 2 and 100 characters")]
         public string? CostCity1 { get => CostCity; set => CostCity = value; }
 
-        [DisplayName("City")]
-        [Required(ErrorMessage = "City is requerid")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "City  must be between 2 and 100 characters")]
+        [DisplayName("Province")]
+        [Required(ErrorMessage = "Province is requerid")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "Province  must be between 2 and 100 characters")]
         public string? CostProvince1 { get => CostProvince; set => CostProvince = value; }
 
         [DisplayName("Postal")]
@@ -61,9 +61,9 @@ namespace Projects.Models
         [StringLength(10, MinimumLength = 5, ErrorMessage = "Postal  must be between 5 and 10 characters")]
         public string? CostPostal1 { get => CostPostal; set => CostPostal = value; }
 
-        [DisplayName("Postal")]
-        [Required(ErrorMessage = "Postal is requerid")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Postal  must be between 2 and 100 characters")]
+        [DisplayName("E-mail")]
+        [Required(ErrorMessage = "E-mail is requerid")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "E-mail  must be between 2 and 100 characters")]
         public string? CostEmial1 { get => CostEmial; set => CostEmial = value; }
 
         [DisplayName("PhoneNumber")]

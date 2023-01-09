@@ -19,61 +19,55 @@ namespace Projects._Repositories
         //Methods
         public void Add(Customers Customers)
         {
-            using (var connecction = new SqlConnection(ConnectingString))
-            using (var command = new SqlCommand("AddCustomersDB"))
-            {
-                connecction.Open();
-                command.Connection = connecction;
-                command.CommandType = CommandType.StoredProcedure;
+            using var connecction = new SqlConnection(ConnectingString);
+            using var command = new SqlCommand("AddCustomersDB");
+            connecction.Open();
+            command.Connection = connecction;
+            command.CommandType = CommandType.StoredProcedure;
 
 
-                command.Parameters.AddWithValue("@CompanyName", Customers.CostCompName1);
-                command.Parameters.AddWithValue("@NIP", Customers.CostNip1);
-                command.Parameters.AddWithValue("@Country", Customers.CostContry1);
-                command.Parameters.AddWithValue("@StreetAddress", Customers.CostStreatAdres1);
-                command.Parameters.AddWithValue("@City", Customers.CostCity1);
-                command.Parameters.AddWithValue("@Province", Customers.CostProvince1);
-                command.Parameters.AddWithValue("@Postal", Customers.CostPostal1);
-                command.Parameters.AddWithValue("@Email", Customers.CostEmial1);
-                command.Parameters.AddWithValue("@PhonneNum", Customers.CostPhoneNumer1);
-                command.ExecuteNonQuery();
-            }
+            command.Parameters.AddWithValue("@CompanyName", Customers.CostCompName1);
+            command.Parameters.AddWithValue("@NIP", Customers.CostNip1);
+            command.Parameters.AddWithValue("@Country", Customers.CostContry1);
+            command.Parameters.AddWithValue("@StreetAddress", Customers.CostStreatAdres1);
+            command.Parameters.AddWithValue("@City", Customers.CostCity1);
+            command.Parameters.AddWithValue("@Province", Customers.CostProvince1);
+            command.Parameters.AddWithValue("@Postal", Customers.CostPostal1);
+            command.Parameters.AddWithValue("@Email", Customers.CostEmial1);
+            command.Parameters.AddWithValue("@PhonneNum", Customers.CostPhoneNumer1);
+            command.ExecuteNonQuery();
         }
 
         public void Delete(int id)
         {
-            using (var connecction = new SqlConnection(ConnectingString))
-            using (var command = new SqlCommand("DeleteCustomers"))
-            {
-                connecction.Open();
-                command.Connection = connecction;
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@ID", id);
-                command.ExecuteNonQuery();
-            }
+            using var connecction = new SqlConnection(ConnectingString);
+            using var command = new SqlCommand("DeleteCustomers");
+            connecction.Open();
+            command.Connection = connecction;
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@ID", id);
+            command.ExecuteNonQuery();
         }
 
         public void Edit(Customers Customers)
         {
-            using (var connecction = new SqlConnection(ConnectingString))
-            using (var command = new SqlCommand("EditCustomers"))
-            {
-                connecction.Open();
-                command.Connection = connecction;
-                command.CommandType = CommandType.StoredProcedure;
+            using var connecction = new SqlConnection(ConnectingString);
+            using var command = new SqlCommand("EditCustomers");
+            connecction.Open();
+            command.Connection = connecction;
+            command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@ID", Customers.ID);
-                command.Parameters.AddWithValue("@CompanyName", Customers.CostCompName1);
-                command.Parameters.AddWithValue("@NIP", Customers.CostNip1);
-                command.Parameters.AddWithValue("@StreetAddress", Customers.CostStreatAdres1);
-                command.Parameters.AddWithValue("@Country", Customers.CostContry1);
-                command.Parameters.AddWithValue("@City", Customers.CostCity1);
-                command.Parameters.AddWithValue("@Province", Customers.CostProvince1);
-                command.Parameters.AddWithValue("@Postal", Customers.CostPostal1);
-                command.Parameters.AddWithValue("@Email", Customers.CostEmial1);
-                command.Parameters.AddWithValue("@PhonneNum", Customers.CostPhoneNumer1);
-                command.ExecuteNonQuery();
-            }
+            command.Parameters.AddWithValue("@ID", Customers.ID);
+            command.Parameters.AddWithValue("@CompanyName", Customers.CostCompName1);
+            command.Parameters.AddWithValue("@NIP", Customers.CostNip1);
+            command.Parameters.AddWithValue("@StreetAddress", Customers.CostStreatAdres1);
+            command.Parameters.AddWithValue("@Country", Customers.CostContry1);
+            command.Parameters.AddWithValue("@City", Customers.CostCity1);
+            command.Parameters.AddWithValue("@Province", Customers.CostProvince1);
+            command.Parameters.AddWithValue("@Postal", Customers.CostPostal1);
+            command.Parameters.AddWithValue("@Email", Customers.CostEmial1);
+            command.Parameters.AddWithValue("@PhonneNum", Customers.CostPhoneNumer1);
+            command.ExecuteNonQuery();
         }
 
         public IEnumerable<Customers> GetAll()
@@ -86,23 +80,23 @@ namespace Projects._Repositories
                 command.Connection = connecction;
                 command.CommandType = CommandType.StoredProcedure;
 
-                using (var reader = command.ExecuteReader())
+                using var reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    var cusModel = new Customers
                     {
-                        var cusModel = new Customers();
-                        cusModel.ID = (int)reader[0];
-                        cusModel.CostCompName1 = reader[1].ToString();
-                        cusModel.CostNip1 = reader[2].ToString();
-                        cusModel.CostContry1 = reader[3].ToString();
-                        cusModel.CostStreatAdres1 = reader[4].ToString();
-                        cusModel.CostCity1 = reader[5].ToString();
-                        cusModel.CostProvince1 = reader[6].ToString();
-                        cusModel.CostPostal1 = reader[7].ToString();
-                        cusModel.CostEmial1 = reader[8].ToString();
-                        cusModel.CostPhoneNumer1 = reader[9].ToString();
-                        CusList.Add(cusModel);
-                    }
+                        ID = (int)reader[0],
+                        CostCompName1 = reader[1].ToString(),
+                        CostNip1 = reader[2].ToString(),
+                        CostContry1 = reader[3].ToString(),
+                        CostStreatAdres1 = reader[4].ToString(),
+                        CostCity1 = reader[5].ToString(),
+                        CostProvince1 = reader[6].ToString(),
+                        CostPostal1 = reader[7].ToString(),
+                        CostEmial1 = reader[8].ToString(),
+                        CostPhoneNumer1 = reader[9].ToString()
+                    };
+                    CusList.Add(cusModel);
                 }
             }
             return CusList;
@@ -122,23 +116,23 @@ namespace Projects._Repositories
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@ID", SqlDbType.Int).Value= CusID;
 
-                using (var reader = command.ExecuteReader())
+                using var reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    var cusModel = new Customers
                     {
-                        var cusModel = new Customers();
-                        cusModel.ID = (int)reader[0];
-                        cusModel.CostCompName1 = reader[1].ToString();
-                        cusModel.CostNip1= reader[2].ToString();
-                        cusModel.CostContry1 = reader[3].ToString();
-                        cusModel.CostStreatAdres1= reader[4].ToString();
-                        cusModel.CostCity1= reader[5].ToString();
-                        cusModel.CostProvince1= reader[6].ToString();
-                        cusModel.CostPostal1= reader[7].ToString();
-                        cusModel.CostEmial1 = reader[8].ToString();
-                        cusModel.CostPhoneNumer1= reader[9].ToString();
-                        CusList.Add(cusModel);
-                    }
+                        ID = (int)reader[0],
+                        CostCompName1 = reader[1].ToString(),
+                        CostNip1 = reader[2].ToString(),
+                        CostContry1 = reader[3].ToString(),
+                        CostStreatAdres1 = reader[4].ToString(),
+                        CostCity1 = reader[5].ToString(),
+                        CostProvince1 = reader[6].ToString(),
+                        CostPostal1 = reader[7].ToString(),
+                        CostEmial1 = reader[8].ToString(),
+                        CostPhoneNumer1 = reader[9].ToString()
+                    };
+                    CusList.Add(cusModel);
                 }
             }
             //Serch by name
@@ -150,23 +144,23 @@ namespace Projects._Repositories
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@CostomersName",CustCompnayName);
 
-                using (var readerv2 = command.ExecuteReader())
+                using var readerv2 = command.ExecuteReader();
+                while (readerv2.Read())
                 {
-                    while (readerv2.Read())
+                    var cusModel = new Customers
                     {
-                        var cusModel = new Customers();
-                        cusModel.ID = (int)readerv2[0];
-                        cusModel.CostCompName1 = readerv2[1].ToString();
-                        cusModel.CostNip1 = readerv2[2].ToString();
-                        cusModel.CostContry1 = readerv2[3].ToString();
-                        cusModel.CostStreatAdres1 = readerv2[4].ToString();
-                        cusModel.CostCity1 = readerv2[5].ToString();
-                        cusModel.CostProvince1 = readerv2[6].ToString();
-                        cusModel.CostPostal1 = readerv2[7].ToString();
-                        cusModel.CostEmial1 = readerv2[8].ToString();
-                        cusModel.CostPhoneNumer1 = readerv2[9].ToString();
-                        CusList.Add(cusModel);
-                    }
+                        ID = (int)readerv2[0],
+                        CostCompName1 = readerv2[1].ToString(),
+                        CostNip1 = readerv2[2].ToString(),
+                        CostContry1 = readerv2[3].ToString(),
+                        CostStreatAdres1 = readerv2[4].ToString(),
+                        CostCity1 = readerv2[5].ToString(),
+                        CostProvince1 = readerv2[6].ToString(),
+                        CostPostal1 = readerv2[7].ToString(),
+                        CostEmial1 = readerv2[8].ToString(),
+                        CostPhoneNumer1 = readerv2[9].ToString()
+                    };
+                    CusList.Add(cusModel);
                 }
             }
             return CusList;

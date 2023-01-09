@@ -38,25 +38,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textTrID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TruckRegistration = new System.Windows.Forms.TextBox();
-            this.comboBoxTruck = new System.Windows.Forms.ComboBox();
-            this.TruckServDate = new System.Windows.Forms.DateTimePicker();
-            this.buttonSaveTruck = new System.Windows.Forms.Button();
             this.buttonCancelTruck = new System.Windows.Forms.Button();
+            this.buttonSaveTruck = new System.Windows.Forms.Button();
+            this.TruckServDate = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxTruck = new System.Windows.Forms.ComboBox();
+            this.TruckRegistration = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textTrID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridViewTruck = new System.Windows.Forms.DataGridView();
-            this.textSearchTruck = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonSerchTruck = new System.Windows.Forms.Button();
-            this.buttonAddedTruck = new System.Windows.Forms.Button();
-            this.buttonEditTruck = new System.Windows.Forms.Button();
             this.buttonDeleteTruck = new System.Windows.Forms.Button();
+            this.buttonEditTruck = new System.Windows.Forms.Button();
+            this.buttonAddedTruck = new System.Windows.Forms.Button();
+            this.buttonSerchTruck = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textSearchTruck = new System.Windows.Forms.TextBox();
+            this.dataGridViewTruck = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -139,78 +139,19 @@
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label4
+            // buttonCancelTruck
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(557, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 28);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "IdNr:";
-            // 
-            // textTrID
-            // 
-            this.textTrID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTrID.Location = new System.Drawing.Point(623, 8);
-            this.textTrID.Name = "textTrID";
-            this.textTrID.Size = new System.Drawing.Size(44, 34);
-            this.textTrID.TabIndex = 3;
-            this.textTrID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(344, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Truck Name:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(344, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 28);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Registration:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(344, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 28);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Service Date:";
-            // 
-            // TruckRegistration
-            // 
-            this.TruckRegistration.Location = new System.Drawing.Point(483, 127);
-            this.TruckRegistration.Name = "TruckRegistration";
-            this.TruckRegistration.Size = new System.Drawing.Size(194, 34);
-            this.TruckRegistration.TabIndex = 7;
-            // 
-            // comboBoxTruck
-            // 
-            this.comboBoxTruck.FormattingEnabled = true;
-            this.comboBoxTruck.Location = new System.Drawing.Point(483, 73);
-            this.comboBoxTruck.Name = "comboBoxTruck";
-            this.comboBoxTruck.Size = new System.Drawing.Size(194, 36);
-            this.comboBoxTruck.TabIndex = 8;
-            // 
-            // TruckServDate
-            // 
-            this.TruckServDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TruckServDate.Location = new System.Drawing.Point(483, 177);
-            this.TruckServDate.Name = "TruckServDate";
-            this.TruckServDate.Size = new System.Drawing.Size(194, 34);
-            this.TruckServDate.TabIndex = 9;
+            this.buttonCancelTruck.BackColor = System.Drawing.Color.Red;
+            this.buttonCancelTruck.FlatAppearance.BorderSize = 0;
+            this.buttonCancelTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelTruck.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancelTruck.ForeColor = System.Drawing.Color.White;
+            this.buttonCancelTruck.Location = new System.Drawing.Point(643, 353);
+            this.buttonCancelTruck.Name = "buttonCancelTruck";
+            this.buttonCancelTruck.Size = new System.Drawing.Size(176, 47);
+            this.buttonCancelTruck.TabIndex = 13;
+            this.buttonCancelTruck.Text = "Cancel";
+            this.buttonCancelTruck.UseVisualStyleBackColor = false;
             // 
             // buttonSaveTruck
             // 
@@ -226,19 +167,79 @@
             this.buttonSaveTruck.Text = "Save";
             this.buttonSaveTruck.UseVisualStyleBackColor = false;
             // 
-            // buttonCancelTruck
+            // TruckServDate
             // 
-            this.buttonCancelTruck.BackColor = System.Drawing.Color.Red;
-            this.buttonCancelTruck.FlatAppearance.BorderSize = 0;
-            this.buttonCancelTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelTruck.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonCancelTruck.ForeColor = System.Drawing.Color.White;
-            this.buttonCancelTruck.Location = new System.Drawing.Point(643, 353);
-            this.buttonCancelTruck.Name = "buttonCancelTruck";
-            this.buttonCancelTruck.Size = new System.Drawing.Size(176, 47);
-            this.buttonCancelTruck.TabIndex = 13;
-            this.buttonCancelTruck.Text = "Cancel";
-            this.buttonCancelTruck.UseVisualStyleBackColor = false;
+            this.TruckServDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TruckServDate.Location = new System.Drawing.Point(483, 177);
+            this.TruckServDate.Name = "TruckServDate";
+            this.TruckServDate.Size = new System.Drawing.Size(194, 34);
+            this.TruckServDate.TabIndex = 9;
+            // 
+            // comboBoxTruck
+            // 
+            this.comboBoxTruck.FormattingEnabled = true;
+            this.comboBoxTruck.Location = new System.Drawing.Point(483, 73);
+            this.comboBoxTruck.Name = "comboBoxTruck";
+            this.comboBoxTruck.Size = new System.Drawing.Size(194, 36);
+            this.comboBoxTruck.TabIndex = 8;
+            // 
+            // TruckRegistration
+            // 
+            this.TruckRegistration.Location = new System.Drawing.Point(483, 127);
+            this.TruckRegistration.Name = "TruckRegistration";
+            this.TruckRegistration.Size = new System.Drawing.Size(194, 34);
+            this.TruckRegistration.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(344, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 28);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Service Date:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(344, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 28);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Registration:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(344, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 28);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Truck Name:";
+            // 
+            // textTrID
+            // 
+            this.textTrID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textTrID.Location = new System.Drawing.Point(623, 8);
+            this.textTrID.Name = "textTrID";
+            this.textTrID.Size = new System.Drawing.Size(44, 34);
+            this.textTrID.TabIndex = 3;
+            this.textTrID.Text = "0";
+            this.textTrID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(557, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 28);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "IdNr:";
             // 
             // tabPage1
             // 
@@ -266,6 +267,95 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1310, 409);
             this.panel2.TabIndex = 2;
+            // 
+            // buttonDeleteTruck
+            // 
+            this.buttonDeleteTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDeleteTruck.BackColor = System.Drawing.Color.Red;
+            this.buttonDeleteTruck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteTruck.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonDeleteTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonDeleteTruck.Location = new System.Drawing.Point(1211, 160);
+            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
+            this.buttonDeleteTruck.Size = new System.Drawing.Size(94, 44);
+            this.buttonDeleteTruck.TabIndex = 10;
+            this.buttonDeleteTruck.Text = "Delete";
+            this.buttonDeleteTruck.UseVisualStyleBackColor = false;
+            // 
+            // buttonEditTruck
+            // 
+            this.buttonEditTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEditTruck.BackColor = System.Drawing.Color.DarkBlue;
+            this.buttonEditTruck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditTruck.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
+            this.buttonEditTruck.FlatAppearance.BorderSize = 0;
+            this.buttonEditTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonEditTruck.Location = new System.Drawing.Point(1211, 108);
+            this.buttonEditTruck.Name = "buttonEditTruck";
+            this.buttonEditTruck.Size = new System.Drawing.Size(94, 46);
+            this.buttonEditTruck.TabIndex = 9;
+            this.buttonEditTruck.Text = "Edit";
+            this.buttonEditTruck.UseVisualStyleBackColor = false;
+            // 
+            // buttonAddedTruck
+            // 
+            this.buttonAddedTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddedTruck.BackColor = System.Drawing.Color.Green;
+            this.buttonAddedTruck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddedTruck.FlatAppearance.BorderSize = 0;
+            this.buttonAddedTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddedTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddedTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAddedTruck.Location = new System.Drawing.Point(1211, 58);
+            this.buttonAddedTruck.Name = "buttonAddedTruck";
+            this.buttonAddedTruck.Size = new System.Drawing.Size(94, 44);
+            this.buttonAddedTruck.TabIndex = 8;
+            this.buttonAddedTruck.Text = "Add new";
+            this.buttonAddedTruck.UseVisualStyleBackColor = false;
+            this.buttonAddedTruck.Click += new System.EventHandler(this.buttonAddedTruck_Click);
+            // 
+            // buttonSerchTruck
+            // 
+            this.buttonSerchTruck.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.buttonSerchTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSerchTruck.BackColor = System.Drawing.Color.DarkOrange;
+            this.buttonSerchTruck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSerchTruck.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonSerchTruck.FlatAppearance.BorderSize = 0;
+            this.buttonSerchTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSerchTruck.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSerchTruck.ForeColor = System.Drawing.Color.Black;
+            this.buttonSerchTruck.Location = new System.Drawing.Point(1096, 22);
+            this.buttonSerchTruck.Name = "buttonSerchTruck";
+            this.buttonSerchTruck.Size = new System.Drawing.Size(109, 31);
+            this.buttonSerchTruck.TabIndex = 7;
+            this.buttonSerchTruck.Text = "Serach";
+            this.buttonSerchTruck.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(42, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Search Truck:";
+            // 
+            // textSearchTruck
+            // 
+            this.textSearchTruck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textSearchTruck.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textSearchTruck.Location = new System.Drawing.Point(186, 25);
+            this.textSearchTruck.Name = "textSearchTruck";
+            this.textSearchTruck.Size = new System.Drawing.Size(904, 27);
+            this.textSearchTruck.TabIndex = 5;
             // 
             // dataGridViewTruck
             // 
@@ -324,95 +414,6 @@
             this.dataGridViewTruck.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTruck.Size = new System.Drawing.Size(1200, 246);
             this.dataGridViewTruck.TabIndex = 0;
-            // 
-            // textSearchTruck
-            // 
-            this.textSearchTruck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textSearchTruck.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textSearchTruck.Location = new System.Drawing.Point(186, 25);
-            this.textSearchTruck.Name = "textSearchTruck";
-            this.textSearchTruck.Size = new System.Drawing.Size(904, 27);
-            this.textSearchTruck.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(42, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Search Truck:";
-            // 
-            // buttonSerchTruck
-            // 
-            this.buttonSerchTruck.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.buttonSerchTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSerchTruck.BackColor = System.Drawing.Color.DarkOrange;
-            this.buttonSerchTruck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSerchTruck.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonSerchTruck.FlatAppearance.BorderSize = 0;
-            this.buttonSerchTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSerchTruck.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSerchTruck.ForeColor = System.Drawing.Color.Black;
-            this.buttonSerchTruck.Location = new System.Drawing.Point(1096, 22);
-            this.buttonSerchTruck.Name = "buttonSerchTruck";
-            this.buttonSerchTruck.Size = new System.Drawing.Size(109, 31);
-            this.buttonSerchTruck.TabIndex = 7;
-            this.buttonSerchTruck.Text = "Serach";
-            this.buttonSerchTruck.UseVisualStyleBackColor = false;
-            // 
-            // buttonAddedTruck
-            // 
-            this.buttonAddedTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddedTruck.BackColor = System.Drawing.Color.Green;
-            this.buttonAddedTruck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddedTruck.FlatAppearance.BorderSize = 0;
-            this.buttonAddedTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddedTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAddedTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAddedTruck.Location = new System.Drawing.Point(1211, 58);
-            this.buttonAddedTruck.Name = "buttonAddedTruck";
-            this.buttonAddedTruck.Size = new System.Drawing.Size(94, 44);
-            this.buttonAddedTruck.TabIndex = 8;
-            this.buttonAddedTruck.Text = "Add new";
-            this.buttonAddedTruck.UseVisualStyleBackColor = false;
-            this.buttonAddedTruck.Click += new System.EventHandler(this.buttonAddedTruck_Click);
-            // 
-            // buttonEditTruck
-            // 
-            this.buttonEditTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditTruck.BackColor = System.Drawing.Color.DarkBlue;
-            this.buttonEditTruck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEditTruck.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.buttonEditTruck.FlatAppearance.BorderSize = 0;
-            this.buttonEditTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonEditTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonEditTruck.Location = new System.Drawing.Point(1211, 108);
-            this.buttonEditTruck.Name = "buttonEditTruck";
-            this.buttonEditTruck.Size = new System.Drawing.Size(94, 46);
-            this.buttonEditTruck.TabIndex = 9;
-            this.buttonEditTruck.Text = "Edit";
-            this.buttonEditTruck.UseVisualStyleBackColor = false;
-            // 
-            // buttonDeleteTruck
-            // 
-            this.buttonDeleteTruck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteTruck.BackColor = System.Drawing.Color.Red;
-            this.buttonDeleteTruck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDeleteTruck.FlatAppearance.BorderSize = 0;
-            this.buttonDeleteTruck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteTruck.Font = new System.Drawing.Font("Book Antiqua", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDeleteTruck.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonDeleteTruck.Location = new System.Drawing.Point(1211, 160);
-            this.buttonDeleteTruck.Name = "buttonDeleteTruck";
-            this.buttonDeleteTruck.Size = new System.Drawing.Size(94, 44);
-            this.buttonDeleteTruck.TabIndex = 10;
-            this.buttonDeleteTruck.Text = "Delete";
-            this.buttonDeleteTruck.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 

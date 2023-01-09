@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projects.Views
 {
-    internal interface CustomersView
+    public interface ICustomersView
     {
         //Propertis -Fileds
         string CostId { get; set; }

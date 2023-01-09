@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Projects.Views
 {
-    public partial class CustomersForms : Form ,CustomersView
+    public partial class CustomersForms : Form ,ICustomersView
     {
         //Fields
         private string message;
@@ -149,6 +149,10 @@ namespace Projects.Views
         private void dataGridViewCustomers_Resize(object sender, EventArgs e)
         {
             dataGridViewCustomers.Columns[0].Width = 50;  // or whatever width works well for abbrev
+            dataGridViewCustomers.Columns[2].Width = 100;  // or whatever width works well for abbrev
+            dataGridViewCustomers.Columns[3].Width = 90;  // or whatever width works well for abbrev
+            dataGridViewCustomers.Columns[7].Width = 90;  // or whatever width works well for abbrev
+            dataGridViewCustomers.Columns[8].Width = 140;  // or whatever width works well for abbrev
 
         }
     }
