@@ -298,6 +298,7 @@ namespace Projects.Views
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1300, 552);
             this.panelDesktop.TabIndex = 7;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint_1);
             // 
             // pictureBox2
             // 

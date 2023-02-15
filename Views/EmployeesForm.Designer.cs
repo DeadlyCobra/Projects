@@ -443,10 +443,13 @@ namespace EmployeesForms
             // 
             // textID
             // 
+            this.textID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textID.Location = new System.Drawing.Point(591, 11);
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(50, 34);
-            this.textID.TabIndex = 0;
+            this.textID.TabIndex = 3;
+            this.textID.Text = "0";
+            this.textID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 

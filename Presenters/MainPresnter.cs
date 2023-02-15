@@ -27,6 +27,7 @@ namespace Projects.Presenters
             this.mainView.ShowEmpForms += ShowEmpsView;
             this.mainView.ShowMachForms += ShowMachView;
             this.mainView.ShowCustForms += ShowCustView;
+            this.mainView.ShowOrdForms += ShowOrdView;
         }
         
 
@@ -45,9 +46,15 @@ namespace Projects.Presenters
         }
         private void ShowCustView(object? sender, EventArgs e)
         {
-            CustomersView view = CustomersForms.GetInstance((MainView)mainView);
+            ICustomersView view = CustomersForms.GetInstance((MainView)mainView);
             ICosRepository repository = new CosRepository(sqlConnectingString);
             new CostPreseter(view, repository);
+        }
+        private void ShowOrdView(object? sender, EventArgs e)
+        {
+            IOrdersView view = FormOrders.GetInstance((MainView)mainView);
+            IOrdRepository repository = new OrdRepository(sqlConnectingString);
+            new OrdPresenter(view, repository);
         }
     }
 }

@@ -7,13 +7,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EmployeesForms
 {
-    public partial class EmployeesForm : Form, EmployeesView
+    public partial class EmployeesForm : Form, EmployeesView 
     {
 
         //Fields
@@ -153,7 +154,7 @@ namespace EmployeesForms
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonAdded_Click(object sender, EventArgs e)

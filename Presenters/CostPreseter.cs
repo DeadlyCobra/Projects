@@ -11,13 +11,13 @@ namespace Projects.Presenters
     internal class CostPreseter
     {
         //Feilds
-        private CustomersView view;
+        private ICustomersView view;
         private ICosRepository repository;
         private BindingSource costBindingSource;
         private IEnumerable<Customers> CustomersList;
 
         //Constructor
-        public CostPreseter(CustomersView view, ICosRepository repository)
+        public CostPreseter(ICustomersView view, ICosRepository repository)
         {
             this.costBindingSource= new BindingSource();
             this.view = view;

@@ -18,9 +18,6 @@ namespace Projects.Models
         private string TrRegistration;
         private string TrServ;
        
-
-
-
         //Propertis- Validations
         //Trucks
         [DisplayName("Id")]

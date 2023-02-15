@@ -11,6 +11,6 @@ namespace Projects.Views
         event EventHandler ShowEmpForms;
         event EventHandler ShowMachForms;
         event EventHandler ShowCustForms;
-          
+        event EventHandler ShowOrdForms;
     }
 }
